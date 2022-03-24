@@ -12,12 +12,12 @@ app.use(cookieParser());
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/api/messages', (req, res) => {
-    res.send(messages)
-})
 app.post('/message', (req, res) => {
     messages.push(req.body)
     res.send('OK')
+})
+app.get('/api/messages', (req, res) => {
+    res.send(messages)
 })
 // messages.module.push(random)
 
