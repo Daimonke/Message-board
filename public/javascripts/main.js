@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 
 // POST TO MESSAGES API
 form.addEventListener('submit', e => {
+    e.preventDefault()
     let date = new Date()
     let data = {
         message: e.target.elements.message.value,
@@ -16,7 +17,7 @@ form.addEventListener('submit', e => {
         body: JSON.stringify(data),
     })
     .then(form.reset())
-    .then(updateScreen())
+    .finally(updateScreen())
 })
 
 // GET MESSAGES TO SCREEN
