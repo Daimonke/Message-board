@@ -80,6 +80,16 @@ form #send {
   margin: 0;
 }
 
+#nickname {
+display: block;
+margin: 0 auto;
+width: 50%;
+height: 30px;
+border-radius: 10px;
+border: 2px solid gold;
+text-align: center;
+}
+
 @media (min-width: 1300px){
   main {
     width: 40%;

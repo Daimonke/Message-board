@@ -1,7 +1,3 @@
-const messages = [{
-    message: "Hello!",
-    hours: 17,
-    minutes: 15
-}]
+const messages = []
 
 module.exports = messages

@@ -7,7 +7,8 @@ form.addEventListener('submit', e => {
     let data = {
         message: e.target.elements.message.value,
         hours: date.getHours(),
-        minutes: date.getMinutes()
+        minutes: date.getMinutes(),
+        nickname: document.querySelector('#nickname').value
     }
     fetch(`https://daimonke.herokuapp.com/message`, {
         method: 'POST',
@@ -38,7 +39,7 @@ function updateScreen() {
                 msg.classList.add('msg')
                 time.classList.add('time')
 
-                msg.textContent = item.message
+                msg.textContent = `${item.nickname}: ${item.message}`
                 time.textContent = `${item.hours}:${item.minutes}h`
 
                 chatDiv.append(msg, time)
