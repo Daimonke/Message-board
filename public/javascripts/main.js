@@ -1,14 +1,15 @@
 const form = document.querySelector('form')
-
 // POST TO MESSAGES API
 form.addEventListener('submit', e => {
     e.preventDefault()
+    let nickname = document.querySelector('#nickname').value
+    if(nickname){
     let date = new Date()
     let data = {
         message: e.target.elements.message.value,
         hours: date.getHours(),
         minutes: date.getMinutes(),
-        nickname: document.querySelector('#nickname').value
+        nickname: nickname
     }
     fetch(`https://daimonke.herokuapp.com/message`, {
         method: 'POST',
@@ -19,6 +20,7 @@ form.addEventListener('submit', e => {
     })
     .then(form.reset())
     .finally(updateScreen())
+    } else alert('Type your nickname')
 })
 
 // GET MESSAGES TO SCREEN
