@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors)
+app.use(cors())
 
 app.post('/message', (req, res) => {
     messages.push(req.body)
@@ -21,6 +21,5 @@ app.post('/message', (req, res) => {
 app.get('/api/messages', (req, res) => {
     res.send(messages)
 })
-// messages.module.push(random)
 
 module.exports = app;
