@@ -16,8 +16,8 @@ form.addEventListener('submit', e => {
         },
         body: JSON.stringify(data),
     })
-    form.reset()
-    updateScreen()
+    .then(form.reset())
+    .then(updateScreen())
 })
 
 // GET MESSAGES TO SCREEN

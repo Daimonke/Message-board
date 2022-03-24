@@ -1,7 +1,7 @@
 const messages = [{
     message: "Hello!",
-    hours: 8,
-    minutes: 00
+    hours: 17,
+    minutes: 15
 }]
 
 module.exports = messages
