@@ -8,7 +8,7 @@ form.addEventListener('submit', e => {
         hours: date.getHours(),
         minutes: date.getMinutes()
     }
-    fetch('http://localhost:3000/message', {
+    fetch(`https://daimonke.herokuapp.com/message`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const chatbox = document.querySelector('.chatbox')
 
 
 function updateScreen() {
-    fetch('http://localhost:3000/api/messages')
+    fetch(`https://daimonke.herokuapp.com/api/messages`)
         .then(data => data.json())
         .then(data => {
             chatbox.innerHTML = ''
