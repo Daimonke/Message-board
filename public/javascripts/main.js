@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 
 // POST TO MESSAGES API
 form.addEventListener('submit', e => {
+    e.preventDefault()
     let date = new Date()
     let data = {
         message: e.target.elements.message.value,
