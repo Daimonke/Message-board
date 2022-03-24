@@ -16,7 +16,7 @@ app.use(cors())
 
 app.post('/message', (req, res) => {
     messages.push(req.body)
-    res.send('OK')
+    res.redirect('/')
 })
 app.get('/api/messages', (req, res) => {
     res.send(messages)
