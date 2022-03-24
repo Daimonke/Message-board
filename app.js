@@ -15,10 +15,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
 
 app.post('/message', (req, res) => {
+    res.status(200)
     messages.push(req.body)
     res.redirect('/')
 })
 app.get('/api/messages', (req, res) => {
+    res.status(200)
     res.send(messages)
 })
 

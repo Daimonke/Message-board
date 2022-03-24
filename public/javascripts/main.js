@@ -19,7 +19,7 @@ form.addEventListener('submit', e => {
         body: JSON.stringify(data),
     })
     .then(form.reset())
-    .finally(updateScreen())
+    .finally(setTimeout(() => {updateScreen()}, 200))
     } else alert('Type your nickname')
 })
 
