@@ -48,3 +48,32 @@ form #send {
   color: white;
   width: 20%;
 }
+
+.chatDiv {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chatDiv:nth-child(odd){
+  background-color: rgb(159, 197, 255);
+}
+.chatDiv:nth-child(even){
+  background-color: rgb(95, 159, 255);
+}
+
+.msg {
+  word-break: break-all;
+
+  width: 80%;
+  margin: 0;
+  border-right: 2px solid black;
+}
+
+.time {
+  width: fit-content;
+  margin: 0;
+}
