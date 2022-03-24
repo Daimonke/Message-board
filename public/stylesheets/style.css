@@ -41,6 +41,7 @@ form #message {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid rgb(61, 123, 255);
+  resize: none;
 }
 
 form #send {
@@ -69,7 +70,6 @@ form #send {
 
 .msg {
   word-break: break-all;
-
   width: 80%;
   margin: 0;
   border-right: 2px solid black;
